@@ -5,7 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useAppDispatch } from "@/src/store/hooks"
 import {
-  removeBookmark,
+  deleteBookmark,
+} from "@/src/store/features/bookmarks/bookmarksThunks"
+import {
   type Bookmark,
 } from "@/src/store/features/bookmarks/bookmarksSlice"
 
@@ -25,7 +27,7 @@ export function BookmarkCard({ bookmark }: BookmarkCardProps) {
   const dispatch = useAppDispatch()
 
   const handleDelete = () => {
-    dispatch(removeBookmark(bookmark.id))
+    dispatch(deleteBookmark(bookmark.id))
   }
 
   return (

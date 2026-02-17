@@ -5,8 +5,13 @@ import { useAppSelector } from "@/src/store/hooks"
 import { BookmarkCard } from "./BookmarkCard"
 
 export function BookmarkList() {
-  const { items, loading, error } = useAppSelector((state) => state.bookmarks)
+  const { items = [], loading, error } = useAppSelector(
+    (state) => state.bookmarks
+  )
 
+  /* =========================
+     LOADING STATE
+  ========================= */
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-20">
@@ -18,14 +23,25 @@ export function BookmarkList() {
     )
   }
 
+  /* =========================
+     ERROR STATE
+  ========================= */
   if (error) {
     return (
-      <div className="flex items-center justify-center py-20">
-        <p className="text-sm text-destructive">{error}</p>
+      <div className="flex flex-col items-center justify-center py-20 text-center">
+        <p className="text-sm font-semibold text-destructive">
+          Something went wrong
+        </p>
+        <p className="mt-1 text-xs text-muted-foreground break-words">
+          {error}
+        </p>
       </div>
     )
   }
 
+  /* =========================
+     EMPTY STATE
+  ========================= */
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20">
@@ -42,6 +58,9 @@ export function BookmarkList() {
     )
   }
 
+  /* =========================
+     SUCCESS STATE
+  ========================= */
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((bookmark) => (
