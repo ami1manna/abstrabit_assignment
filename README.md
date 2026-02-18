@@ -4,13 +4,13 @@ A full-stack bookmark manager built with **Next.js (App Router)**, **Supabase**,
 
 ## 🔗 Live URL
 
-**[https://abstrabit-rosy.vercel.app](https://abstrabit-rosy.vercel.app)**
+ https://abstrabit-assignment-seven.vercel.app/
 
 > Log in with any Google account to test. Bookmarks are private to each user.
 
 ## 📁 GitHub Repo
 
-**[https://github.com/ami1manna/AbstrabitAssignment](https://github.com/ami1manna/AbstrabitAssignment)**
+ https://github.com/ami1manna/abstrabit_assignment
 
 ## 🖼️ ScreenShort
 <img width="1385" height="683" alt="image" src="https://github.com/user-attachments/assets/883e04b7-1d2b-46f3-855c-db4b5830dd63" />
